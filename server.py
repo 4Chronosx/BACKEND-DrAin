@@ -1,7 +1,7 @@
 import json
 from fastapi import FastAPI # type: ignore
 from fastapi.middleware.cors import CORSMiddleware
-
+from pydantic import BaseModel
 from tools.swmm_extract import get_node_flooding_summary
 from tools.swmm_tools import simulate_new
 
@@ -10,7 +10,7 @@ app = FastAPI()
 # Allow local frontend + railway domain
 origins = [
     "http://localhost:3000",
-    "https://drainage-ml-backend-production-87a9.up.railway.app"
+    "https://web-production-2976d.up.railway.app/"
 ]
 
 app.add_middleware(
@@ -21,9 +21,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+class SimulationRequest(BaseModel):
+    nodes: dict
+    links: dict
+    rainfall: dict
 
 @app.post("/run-simulation")
-def run_simulation(nodes: dict, links: dict, rainfall: dict):
+def run_simulation(request: SimulationRequest):
+    nodes = request.nodes
+    links = request.nodes
+    rainfall = request.nodes
     try:
         simulate_new('data/Mandaue_Drainage_Network.inp', nodes, links, rainfall)
     except Exception as e:

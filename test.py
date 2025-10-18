@@ -1,6 +1,4 @@
-import json
-from tools.swmm_tools import simulate_new
-from tools.swmm_extract import get_node_flooding_summary
+import requests
 
 myNodes = {
     'I-0': {'inv_elev': 0, 'init_depth': 0, 'ponding_area': 0, 'surcharge_depth': 0},
@@ -16,18 +14,11 @@ myLinks = {
 }
 
 rainfall = {
-    #'total_precip': 140,
-    #'duration_hr': 0.5,
+    'total_precip': 140,
+    'duration_hr': 0.5,
 }
 
-simulate_new('data/Mandaue_Drainage_Network.inp', myNodes, myLinks, rainfall)
 
-jsonData = None
+url = 'https://web-production-2976d.up.railway.app/'
 
-if rainfall:
-    jsonData = get_node_flooding_summary('data/Mandaue_Drainage_Network_mod.rpt','data/Mandaue_Drainage_Network_mod.out')
-else:
-    jsonData = get_node_flooding_summary('data/Mandaue_Drainage_Network.rpt', 'data/Mandaue_Drainage_Network.out')
-data = json.loads(jsonData)
-
-print(data['nodes_dict']['I-4']['Hours_Flooded'])
+response = requests.post(url, )
