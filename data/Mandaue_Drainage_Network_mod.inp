@@ -61,18 +61,18 @@ RG1              INTENSITY 0:05    1.0     TIMESERIES TS_Rain
 ;;Name           Date        Time     Value
 ;;----------------------------------------
 TS_Rain     00:00     0.00
-TS_Rain     00:05     140.00
-TS_Rain     00:10     280.00
-TS_Rain     00:15     420.00
-TS_Rain     00:20     420.00
-TS_Rain     00:25     280.00
-TS_Rain     00:30     140.00
-TS_Rain     00:35     0.00
-          
-          
-          
-          
-          
+TS_Rain     00:05     51.69
+TS_Rain     00:10     103.38
+TS_Rain     00:15     155.08
+TS_Rain     00:20     206.77
+TS_Rain     00:25     258.46
+TS_Rain     00:30     258.46
+TS_Rain     00:35     215.38
+TS_Rain     00:40     172.31
+TS_Rain     00:45     129.23
+TS_Rain     00:50     86.15
+TS_Rain     00:55     43.08
+TS_Rain     01:00     0.00
 
 
 [SUBCATCHMENTS]
