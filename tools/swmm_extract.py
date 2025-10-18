@@ -4,7 +4,7 @@ import json
 import pickle
 import numpy as np
 
-def get_node_flooding_summary_with_vulnerability(rpt_file_path, out_file_path, model_path):
+def get_node_flooding_summary_with_vulnerability(rpt_file_path, out_file_path, model_path='data/vulnerability_model_k4.pkl'):
     """
     Convert Node Flooding Summary from RPT file to JSON format with hybrid structure.
     Includes all nodes from OUT file, with 0 values for non-flooded nodes.
