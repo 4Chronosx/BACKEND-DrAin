@@ -1,3 +1,4 @@
+import json
 import requests
 
 myNodes = {
@@ -18,7 +19,17 @@ rainfall = {
     'duration_hr': 0.5,
 }
 
+data = {
+    'nodes': myNodes,
+    'links': myLinks,
+    'rainfall': rainfall
+}
 
-url = 'https://web-production-2976d.up.railway.app/'
+url = 'https://web-production-2976d.up.railway.app/run-simulation'
 
-response = requests.post(url, )
+response = requests.post(url, json=data)
+
+print("Status:", response.status_code)
+data = response.json()
+
+print(data['nodes_dict']['I-0'])

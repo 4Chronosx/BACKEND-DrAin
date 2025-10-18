@@ -29,8 +29,8 @@ class SimulationRequest(BaseModel):
 @app.post("/run-simulation")
 def run_simulation(request: SimulationRequest):
     nodes = request.nodes
-    links = request.nodes
-    rainfall = request.nodes
+    links = request.links
+    rainfall = request.rainfall
     try:
         simulate_new('data/Mandaue_Drainage_Network.inp', nodes, links, rainfall)
     except Exception as e:
