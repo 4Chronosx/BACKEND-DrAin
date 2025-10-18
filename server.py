@@ -2,7 +2,7 @@ import json
 from fastapi import FastAPI # type: ignore
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from tools.swmm_extract import get_node_flooding_summary
+from tools.swmm_extract import get_node_flooding_summary_with_vulnerability
 from tools.swmm_tools import simulate_new
 
 app = FastAPI()
@@ -41,9 +41,9 @@ def run_simulation(request: SimulationRequest):
     data = {}
     try:
         if rainfall:
-            jsonData = get_node_flooding_summary('data/Mandaue_Drainage_Network_mod.rpt','data/Mandaue_Drainage_Network_mod.out')
+            jsonData = get_node_flooding_summary_with_vulnerability('data/Mandaue_Drainage_Network_mod.rpt','data/Mandaue_Drainage_Network_mod.out')
         else:
-            jsonData = get_node_flooding_summary('data/Mandaue_Drainage_Network.rpt', 'data/Mandaue_Drainage_Network.out')
+            jsonData = get_node_flooding_summary_with_vulnerability('data/Mandaue_Drainage_Network.rpt', 'data/Mandaue_Drainage_Network.out')
         data = json.loads(jsonData)
     except Exception as e:
         print(f"Unexpected error occured: {e}")

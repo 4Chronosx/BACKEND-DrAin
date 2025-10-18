@@ -4,7 +4,7 @@ import json
 import pickle
 import numpy as np
 
-def get_node_flooding_summary(rpt_file_path, out_file_path, model_path='data/vulnerability_model_k4.pkl'):
+def get_node_flooding_summary_with_vulnerability(rpt_file_path, out_file_path, model_path):
     """
     Convert Node Flooding Summary from RPT file to JSON format with hybrid structure.
     Includes all nodes from OUT file, with 0 values for non-flooded nodes.
@@ -28,13 +28,13 @@ def get_node_flooding_summary(rpt_file_path, out_file_path, model_path='data/vul
     try:
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
-        
+
         kmeans = model['kmeans']
         scaler = model['scaler']
         cluster_ranking = model['cluster_ranking']
         categories = model['categories']
         scores = model['scores']
-        
+
         print(f"✓ Model loaded with k={model['optimal_k']} clusters")
         print(f"Categories: {categories}")
     except Exception as e:
@@ -159,7 +159,7 @@ def get_node_flooding_summary(rpt_file_path, out_file_path, model_path='data/vul
                 # Predict vulnerability if model is loaded
                 vulnerability_category = "N/A"
                 vulnerability_score = 0.0
-                
+
                 if kmeans is not None:
                     try:
                         # Create feature vector: [Hours_Flooded, Maximum_Rate_CMS, Time_of_Max_days, Time_After_Raining_min, Total_Flood_Volume]
