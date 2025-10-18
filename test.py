@@ -16,7 +16,7 @@ myLinks = {
 
 rainfall = {
     'total_precip': 140,
-    'duration_hr': 0.5,
+    'duration_hr': 1,
 }
 
 data = {
@@ -30,6 +30,4 @@ url = 'https://web-production-2976d.up.railway.app/run-simulation'
 response = requests.post(url, json=data)
 
 print("Status:", response.status_code)
-data = response.json()
-
-print(data['nodes_dict']['I-0'])
+print("Response: ", response.json())
