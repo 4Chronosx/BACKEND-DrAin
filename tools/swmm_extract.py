@@ -152,7 +152,7 @@ def get_node_flooding_summary_with_vulnerability(rpt_file_path, out_file_path, m
                     hours_flooded = 0.0
                     max_rate = 0.0
                     time_of_max_days = 0.0
-                    time_of_max_hr_min = 0
+                    time_of_max_hr_min = 60
                     total_flood_volume = 0.0
                     time_after_rain = 0.0
 
