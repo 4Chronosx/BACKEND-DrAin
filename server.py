@@ -10,8 +10,8 @@ app = FastAPI()
 # Allow local frontend + railway domain
 origins = [
     "http://localhost:3000",
-    "https://web-production-2976d.up.railway.app/",
-    "https://pjdsc-drain.vercel.app/"
+    "https://web-production-2976d.up.railway.app",
+    "https://pjdsc-drain.vercel.app"
 ]
 
 app.add_middleware(
