@@ -164,7 +164,7 @@ def get_node_flooding_summary_with_vulnerability(rpt_file_path, out_file_path, m
                     try:
                         # Create feature vector: [Hours_Flooded, Maximum_Rate_CMS, Time_of_Max_days, Time_After_Raining_min, Total_Flood_Volume]
                         # Note: Adjust feature order based on your model training
-                        features = np.array([[time_after_rain, hours_flooded, max_rate, time_of_max_hr_min, total_flood_volume]])
+                        features = np.array([[hours_flooded, max_rate, time_of_max_days, time_after_rain, total_flood_volume]])
                         features_scaled = scaler.transform(features)
                         cluster = kmeans.predict(features_scaled)[0]
                         rank = cluster_ranking[cluster]
