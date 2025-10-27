@@ -1,4 +1,5 @@
 from pyswmm import Simulation, Nodes, Links, RainGages, SimulationPreConfig
+import math
 
 
 def modify_nodes(nodes_ls, sim):
@@ -64,11 +65,24 @@ def simulate_new(inp_path, nodes_ls, links_ls, rainfall_obj, dt_sec=300):
     if rainfall_obj:
         # Create PreConfig
         sim_conf = SimulationPreConfig()
+
+    
+
         timeseries_name = "TS_Rain"
         duration_hr = rainfall_obj.get('duration_hr', 1)
         total_mm = rainfall_obj.get('total_precip', 100)
         rainfall_series = generate_rainfall_event(total_mm, duration_hr)
         print("Rainfall series:", rainfall_series)
+
+        if duration_hr < 24:
+          if (duration_hr > math.floor(duration_hr)):
+            hour = math.floor(duration_hr)
+            mins = int((duration_hr - math.floor(duration_hr)) * 60)
+            sim_conf.add_update_by_token("OPTIONS", "END_TIME", 1, f"{hour if hour >= 10 else '0' + str(hour)}:{mins if mins >= 10 else '0' + str(mins)}:00")
+            sim_conf.add_update_by_token("OPTIONS", "END_DATE", 1, "01/01/2024")
+          else:
+            sim_conf.add_update_by_token("OPTIONS", "END_TIME", 1, f"{duration_hr if duration_hr >= 10 else '0' + str(duration_hr)}:00:00")
+            sim_conf.add_update_by_token("OPTIONS", "END_DATE", 1, "01/01/2024")
 
         for row_num, (t, i) in enumerate(rainfall_series):
             hours = int(t)
@@ -76,7 +90,7 @@ def simulate_new(inp_path, nodes_ls, links_ls, rainfall_obj, dt_sec=300):
             sim_conf.add_update_by_token("TIMESERIES", timeseries_name, 1, f"{hours:02}:{minutes:02}", row_num)
             sim_conf.add_update_by_token("TIMESERIES", timeseries_name, 2, f"{i:.2f}", row_num)
 
-        total_orig_series = 13 # (original steps for 1hr)
+        total_orig_series = 289 # (original steps for 24hr)
         expected_series = len(rainfall_series)
         print(f"orig: {total_orig_series} exp: {expected_series}")
         if total_orig_series > expected_series:

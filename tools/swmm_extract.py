@@ -136,7 +136,7 @@ def get_node_flooding_summary_with_vulnerability(rpt_file_path, out_file_path, m
                         overflow_time = first_overflow.iloc[0]["time"]
                         minutes_after_rain = round((overflow_time - sim_start).total_seconds() / 60, 2)
                     else:
-                        minutes_after_rain = 60  # no overflow
+                        minutes_after_rain = 9999  # no overflow
 
                 # Check if node is in the flooded nodes from RPT
                 if node_id in flooded_nodes_data:
@@ -154,7 +154,7 @@ def get_node_flooding_summary_with_vulnerability(rpt_file_path, out_file_path, m
                     time_of_max_days = 0.0
                     time_of_max_hr_min = 0
                     total_flood_volume = 0.0
-                    time_after_rain = 60
+                    time_after_rain = 9999
 
                 # Predict vulnerability if model is loaded
                 vulnerability_category = "N/A"
