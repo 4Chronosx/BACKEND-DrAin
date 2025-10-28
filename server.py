@@ -12,7 +12,8 @@ origins = [
     "http://localhost:3000",
     "https://web-production-2976d.up.railway.app",
     "https://pjdsc-drain.vercel.app",
-    "https://project-drain.vercel.app"
+    "https://project-drain.vercel.app",
+    "https://backend-drain-kmgt.onrender.com"
 ]
 
 app.add_middleware(
