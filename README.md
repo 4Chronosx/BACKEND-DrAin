@@ -10,14 +10,14 @@
 </a>
 
 <div align="center">
-  <a href="https://github.com/eliseoalcaraz/drAIn-backend">
-    <img src="logo.svg" alt="drAIn Backend logo" width="40%" height="35%">
+  <a href="https://github.com/4Chronosx/BACKEND-DrAin">
+    <img src="logo.png" alt="drAIn Backend logo" width="40%" height="35%">
   </a>
   <br />
   <p align="center">
     <a href="#"><img alt="Status" src="https://img.shields.io/badge/status-Beta-yellow?style=flat&color=yellow" /></a>
     <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white&style=flat" /></a>
-    <a href="https://github.com/eliseoalcaraz/drAIn-backend/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/4Chronosx/BACKEND-DrAin/?color=coral&logo=git&logoColor=white" /></a>
+    <a href="https://github.com//4Chronosx/BACKEND-DrAin/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/4Chronosx/BACKEND-DrAin/?color=coral&logo=git&logoColor=white" /></a>
   </p>
   <a href="https://github.com/4Chronosx/BACKEND-DrAin/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
   &middot;
@@ -229,12 +229,12 @@ You may redistribute and/or modify it under the terms of the GNU GPL, as publish
 <p align="center">Made with 💧 for flood-resilient cities</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/eliseoalcaraz/drAIn-backend.svg?style=for-the-badge
-[contributors-url]: https://github.com/eliseoalcaraz/drAIn-backend/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/eliseoalcaraz/drAIn-backend.svg?style=for-the-badge
-[forks-url]: https://github.com/eliseoalcaraz/drAIn-backend/network/members
-[stars-shield]: https://img.shields.io/github/stars/eliseoalcaraz/drAIn-backend.svg?style=for-the-badge
-[stars-url]: https://github.com/eliseoalcaraz/drAIn-backend/stargazers
-[issues-shield]: https://img.shields.io/github/issues/eliseoalcaraz/drAIn-backend.svg?style=for-the-badge
-[issues-url]: https://github.com/eliseoalcaraz/drAIn-backend/issues
+[contributors-shield]: https://img.shields.io/github/contributors/4Chronosx/BACKEND-DrAin.svg?style=for-the-badge
+[contributors-url]: https://github.com/4Chronosx/BACKEND-DrAin/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/4Chronosx/BACKEND-DrAin.svg?style=for-the-badge
+[forks-url]: https://github.com/4Chronosx/BACKEND-DrAin/network/members
+[stars-shield]: https://img.shields.io/github/stars/4Chronosx/BACKEND-DrAin.svg?style=for-the-badge
+[stars-url]: https://github.com/4Chronosx/BACKEND-DrAin/stargazers
+[issues-shield]: https://img.shields.io/github/issues/4Chronosx/BACKEND-DrAin.svg?style=for-the-badge
+[issues-url]: https://github.com/4Chronosx/BACKEND-DrAin/issues
 
