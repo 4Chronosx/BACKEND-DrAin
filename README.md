@@ -148,7 +148,7 @@ pip install -r requirements.txt
 
 ```bash
 # Start the FastAPI server
-uvicorn uvicorn server:app --reload
+uvicorn server:app --reload
 
 # Server will be available at:
 # http://localhost:3000
