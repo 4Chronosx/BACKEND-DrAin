@@ -11,17 +11,17 @@
 
 <div align="center">
   <a href="https://github.com/eliseoalcaraz/drAIn-backend">
-    <img src="assets/logo.png" alt="drAIn Backend logo" width="40%" height="35%">
+    <img src="logo.svg" alt="drAIn Backend logo" width="40%" height="35%">
   </a>
   <br />
   <p align="center">
     <a href="#"><img alt="Status" src="https://img.shields.io/badge/status-Beta-yellow?style=flat&color=yellow" /></a>
     <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white&style=flat" /></a>
-    <a href="https://github.com/eliseoalcaraz/drAIn-backend/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/eliseoalcaraz/drAIn-backend?color=coral&logo=git&logoColor=white" /></a>
+    <a href="https://github.com/eliseoalcaraz/drAIn-backend/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/4Chronosx/BACKEND-DrAin/?color=coral&logo=git&logoColor=white" /></a>
   </p>
-  <a href="https://github.com/eliseoalcaraz/drAIn-backend/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+  <a href="https://github.com/4Chronosx/BACKEND-DrAin/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
   &middot;
-  <a href="https://github.com/eliseoalcaraz/drAIn-backend/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  <a href="https://github.com/4Chronosx/BACKEND-DrAin/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
 </div>
 
 ---
@@ -79,7 +79,6 @@ Urban flood modeling typically requires specialized software and technical exper
 ### Deployment
 <p align="left">
   <a href="https://railway.app/"><img alt="Railway" src="https://img.shields.io/badge/Railway-0B0D0E?logo=railway&logoColor=white&style=flat" /></a>
-  <a href="https://www.docker.com/"><img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=flat" /></a>
 </p>
 
 ---
@@ -132,8 +131,8 @@ Make sure you have installed:
 
 ```bash
 # Clone the repository
-git clone https://github.com/eliseoalcaraz/drAIn-backend.git
-cd drAIn-backend
+git clone https://github.com/4Chronosx/BACKEND-DrAin.git
+cd BACKEND-DrAin
 
 # Create virtual environment
 python -m venv venv
@@ -161,9 +160,6 @@ uvicorn uvicorn server:app --reload
 
 ### Simulation Endpoints
 - `POST /run-simulation` - Run a new SWMM simulation and Retrieve simulation results
-
-
-*Full API documentation available at `/docs` when server is running*
 
 ---
 
@@ -211,8 +207,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### 📢 Contributors
 
-<a href="https://github.com/eliseoalcaraz/drAIn-backend/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=eliseoalcaraz/drAIn-backend" alt="contrib.rocks image" />
+<a href="https://github.com/4Chronosx/BACKEND-DrAin/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=4Chronosx/BACKEND-DrAin" alt="contrib.rocks image" />
 </a>
 
 ---
