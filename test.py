@@ -6,7 +6,7 @@ from tools.swmm_tools import simulate_new
 
 myNodes = {
 
-    'I-4': {'inv_elev': 16, 'init_depth': 0, 'ponding_area': 0, 'surcharge_depth': 0},
+    #'I-4': {'inv_elev': 16, 'init_depth': 0, 'ponding_area': 0, 'surcharge_depth': 0},
 }
 
 myLinks = {
@@ -14,8 +14,8 @@ myLinks = {
 }
 
 rainfall = {
-    'total_precip': 105,
-    'duration_hr': 1,
+    'total_precip': 400,
+    'duration_hr': 24,
 }
 
 data = {
