@@ -14,8 +14,8 @@ myLinks = {
 }
 
 rainfall = {
-    'total_precip': 400,
-    'duration_hr': 24,
+    #'total_precip': 400,
+    #'duration_hr': 24,
 }
 
 data = {
