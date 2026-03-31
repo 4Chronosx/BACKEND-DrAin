@@ -12,6 +12,7 @@ origins = [
     "http://localhost:3000",
     "https://pjdsc-drain.vercel.app",
     "https://project-drain.vercel.app",
+    "https://ai-drain.vercel.app"
 ]
 
 app.add_middleware(
